@@ -204,6 +204,20 @@ public class steps extends BaseClass {
 			Assert.assertTrue(false);
 		}
 	}
+	
+	//************ Apply for loan way 2
+	
+	
+	
+
+	@When("Click dropdown and click loan option")
+	public void click_dropdown_and_click_loan_option() {
+		apply =new ApplyforLoan(driver);  
+			apply.Applyloanfromdropdown();
+	}
+
+
+
 
 }
 

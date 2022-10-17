@@ -11,10 +11,12 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions
 		(
 				
-		features = "./Features/Login.feature",
+		features = "./Features",
 		glue="stepDefinition",
 		monochrome = true,
 		dryRun = false,
+		//tags= "@regression",
+		//tags="@complete",
 		plugin = {"pretty","html:target/Report.html"}
 		
 		)

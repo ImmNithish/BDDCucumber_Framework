@@ -1,7 +1,11 @@
 package pageObjects;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -23,6 +27,9 @@ public class ApplyforLoan  {
 	@CacheLookup
 	WebElement applybtn;
 	
+//	@FindBy(xpath="(//button[@id='applyButton'])[1]")
+//	@CacheLookup
+//	WebElement applybutton;
 	
 	@FindBy(id="email")
 	@CacheLookup
@@ -96,7 +103,17 @@ public class ApplyforLoan  {
 		return succestxt;
 	}
 
+public void Applyloanfromdropdown()
 
+{
+	Actions action = new Actions(driver);
+	action.moveToElement(driver.findElement(By.id("navbarDropdown"))).click().pause(Duration.ofSeconds(2)).perform();
+	action.moveToElement(driver.findElement(By.xpath("//div[@class='dropdown-menu show']/a[1]")))
+	.pause(Duration.ofSeconds(2)).click().perform();
+	
+	applybtn.click();
+
+}
 	
 	
 	

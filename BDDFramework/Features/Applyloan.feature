@@ -33,11 +33,11 @@ Feature: Apply for a Loan
 @regression
   Scenario: Apply for a Loan by another way
     When Click dropdown and click loan option
-    And Click Apply for a Loan
+  
     Then Verify user landed on a Apply Loan page "https://uibank.uipath.com/loans/apply"
     And User should enter Email Id
     And User should Enter AMOUNT REQUIRED and Select LOAN TERM option and enter their INCOME and AGE
-      | 35000 | 3 | 35000 | 12 |
+      | 35000 | 3 | 35000 | 19 |
     And Click submit Loan Application
     Then Verify the Loan status
     And close browser
